@@ -6,7 +6,7 @@ import com.hw3.model.vo.Product;
 
 public class Run {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		
 		
 		Product sam = new Product("Samsung","Galaxy S9",
@@ -24,6 +24,12 @@ public class Run {
 		System.out.println("===================================");
 		System.out.println("첫 번째 객체의 해쉬코드 값 : " +sam.hashCode() );
 		System.out.println("두 번째 객체의 해쉬코드 값 : " +lg.hashCode());
+		System.out.println("===================================");
+		System.out.println("복제한 객체의 값 : " + sam.clone());
+		System.out.println("===================================");
+		System.out.println("복제한 객체의 필드 값 : " + sam.clone());
+		
+		
 		
 		
 		

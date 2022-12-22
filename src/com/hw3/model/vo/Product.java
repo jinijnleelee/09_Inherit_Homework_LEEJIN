@@ -1,6 +1,6 @@
 package com.hw3.model.vo;
 
-public class Product extends Object {
+public class Product implements Cloneable{
 
 	
 	private String brand;
@@ -78,10 +78,16 @@ super();
 		return super.hashCode();	
 	}
 	@Override
-	public Product clone() {
-		return super.clone();
+	public Product clone() throws CloneNotSupportedException   {
+		return (Product) super.clone();
+		
 		
 	}
+	
+	public interface Cloneable {
+
+	}
+
 	
 	
 	
